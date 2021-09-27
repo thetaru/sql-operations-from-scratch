@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    build: .
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres 
+      POSTGRES_DB: shop
+      POSTGRES_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+volumes:
+  db_data: {}
