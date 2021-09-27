@@ -1,11 +1,11 @@
-# PostgreSQL introduction
+# SQL Operations From Scratch 
 SQL - ゼロからはじめるデータベース操作 - をもとに実施する
 ## ■ 初期設定 
 ```
 ### データベースのデータ領域を作成
 # mkdir -p /var/lib/postgresql/data 
 
-### postgresqlクライアント
+### postgresqlクライアントのインストール
 # yum install postgresql
 ```
 
