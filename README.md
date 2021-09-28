@@ -46,3 +46,22 @@ SQL - ゼロからはじめるデータベース操作 - をもとに実施す�
 ```
 # psql -h localhost -p 5432 -U postgres -d shop
 ```
+
+## ■ データの初期化
+データの永続化の都合上こうするしかないのかな...?
+```
+### コンテナ停止
+# docker-compose down
+
+### データ領域のデータを削除
+# rm -rf /var/lib/postgresql/data/*
+
+### データがないことを確認
+# ls -l /var/lib/postgresql/data
+
+### コンテナ起動
+# docker-compose up -d
+
+### 初期データが作成されていることを確認
+# ls -l /var/lib/postgresql/data
+```
