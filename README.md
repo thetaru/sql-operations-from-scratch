@@ -19,6 +19,11 @@ SQL - ゼロからはじめるデータベース操作 - をもとに実施す�
 # docker-compose down
 ```
 
+## ■ コンテナに入る
+```
+# docker-compose exec db bash
+```
+
 ## ■ データベースへの接続
 ```
 # psql -h localhost -p 5432 -U postgres -d shop
