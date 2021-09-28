@@ -2,6 +2,7 @@ version: '3'
 services:
   db:
     restart: always
+    tty: true
     build:
       context: .
       dockerfile: ./dockerfile
@@ -12,7 +13,7 @@ services:
       POSTGRES_DB: shop
       POSTGRES_PASSWORD: root
     volumes:
-      - /var/lib/postgresql/data:/var/lib/postgresql/data
+      - pg-data:/var/lib/postgresql/data
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     command: ["postgres",
               ### Configure Logging
@@ -20,3 +21,10 @@ services:
               "-c", "log_destination=stderr",
               "-c", "log_connections=on",
               "-c", "log_disconnections=on"]
+volumes:
+  pg-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /var/lib/postgresql/data
+      o: bind
