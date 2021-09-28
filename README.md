@@ -36,6 +36,12 @@ SQL - ゼロからはじめるデータベース操作 - をもとに実施す�
 # docker-compose up -d
 ```
 
+## ■ ログの確認
+コンテナなのでログはエラー出力に吐かせる設定にしている
+```
+# docker-compose logs [-f] db
+```
+
 ## ■ データベースへの接続
 ```
 # psql -h localhost -p 5432 -U postgres -d shop
