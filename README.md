@@ -9,8 +9,7 @@ SQL - ゼロからはじめるデータベース操作 - をもとに実施す�
 # yum install postgresql
 
 ### パスワード認証の省略
-# vi ~/.pgpass
-+  localhost:5432:shop:postgres:root
+# echo "localhost:5432:shop:postgres:root" > ~/.pgpass
 # chmod 600 ~/.pgpass
 ```
 
