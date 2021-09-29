@@ -7,6 +7,11 @@ SQL - ゼロからはじめるデータベース操作 - をもとに実施す�
 
 ### postgresqlクライアントのインストール
 # yum install postgresql
+
+### パスワード認証の省略
+# vi ~/.pgpass
++  localhost:5432:shop:postgres:root
+# chmod 600 ~/.pgpass
 ```
 
 ## ■ コンテナ起動
