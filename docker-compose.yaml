@@ -20,7 +20,15 @@ services:
               "-c", "log_statement=all",
               "-c", "log_destination=stderr",
               "-c", "log_connections=on",
-              "-c", "log_disconnections=on"]
+              "-c", "log_disconnections=on",
+              ### Performance Tuning
+              "-c", "max_connections=1000",
+              "-c", "shared_buffers=2GB",
+              "-c", "effective_cache_size=3MB",
+              "-c", "work_mem=16MB",
+              "-c", "maintenance_work_mem=1GB",
+              "-c", "wal_buffers=16MB",
+              "-c", "default_statistics_target=100"]
 volumes:
   pg-data:
     driver: local
