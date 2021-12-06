@@ -5,8 +5,8 @@ select
   , sum(hanbai_tanka)
 from
     Shohin
-where
-    torokubi > '2009-09-01'
 group by
     shohin_id
+having
+    torokubi > '2009-09-01'
 ;
