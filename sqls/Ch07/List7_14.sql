@@ -9,8 +9,8 @@ from
     TenpoShohin as TS
     inner join Shohin as S
         on TS.shohin_id = S.shohin_id
-            inner join ZaikoShohin as ZS
-                on TS.shohin_id = ZS.shohin_id
+    inner join ZaikoShohin as ZS
+        on TS.shohin_id = ZS.shohin_id
 where
     ZS.souko_id = 'S001'
 ;
